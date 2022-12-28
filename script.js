@@ -2,23 +2,18 @@
 var tenet = dayjs();
 
 console.log(tenet);
-// set varible to format current date being displayed at top of page
+// set var to format current date displayed at top of page
 var todaysDate = tenet.format('dddd, MMMM D, YYYY');
-// set variable for the current hour to adjust color coding
+// set var for the current hour to adjust color coding
 var currentHour =  dayjs().hour()
 console.log(currentHour,"Hour")
 $('#currentDay').text(todaysDate);
 
-// blank array to store all the tasks for each hour
+// blank array to store the tasks for each hour
 var allTasks = ['', '', '', '', '', '', '', ''];
 
 
 
-
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 $(function () {
   $(".saveBtn").on("click",function(){
     var userEntry = $(this).siblings("textarea").val()
