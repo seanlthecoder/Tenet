@@ -5,8 +5,8 @@ console.log(tenet);
 // set varible to format current date being displayed at top of page
 var todaysDate = tenet.format('dddd, MMMM D, YYYY');
 // set variable for the current hour to adjust color coding
-var currentHour = dayjs().hours()
-console.log(currentHour,)
+var currentHour = dayjs().hour()
+console.log(currentHour,"Hour")
 $('#currentDay').text(todaysDate);
 
 // blank array to store all the tasks for each hour
@@ -20,6 +20,13 @@ var allTasks = ['', '', '', '', '', '', '', ''];
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  $(".saveBtn").on("click",function(){
+    var userEntry = $(this).siblings("textarea").val()
+    var timeBlk = $(this).parent().attr("id")
+    console.log(userEntry,timeBlk)
+    localStorage.setItem(timeBlk, userEntry);
+    
+  })
   // TODO: Add a listener for click events on the save button. This code should...........
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
