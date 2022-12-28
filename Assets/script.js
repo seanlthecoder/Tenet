@@ -1,7 +1,7 @@
 // set variable for current date and time
 var tenet = dayjs();
 
-console.log(tenet);
+
 // set var to format current date displayed at top of page
 var todaysDate = tenet.format('dddd, MMMM D, YYYY');
 // set var for the current hour to adjust color coding
@@ -18,7 +18,6 @@ $(function () {
   $(".saveBtn").on("click",function(){
     var userEntry = $(this).siblings("textarea").val()
     var timeBlk = $(this).parent().attr("id")
-    console.log(userEntry,timeBlk)
     localStorage.setItem(timeBlk, userEntry);
 
   })
