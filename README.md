@@ -4,10 +4,10 @@
 
 ## Acceptance Criteria
 
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
+GIVEN I am using a daily planner to create a schedule <br />
+WHEN I open the planner <br />
+THEN the current day is displayed at the top of the calendar <br />
+WHEN I scroll down <br />
 THEN I am presented with time blocks for standard business hours
 WHEN I view the time blocks for that day
 THEN each time block is color-coded to indicate whether it is in the past, present, or future
